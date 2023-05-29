@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>С5.3.XHR Задание 3</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <h2>С5.3.XHR Задание 3</h1>
+        <div class="text">
+            <p>Напишите код приложения, интерфейс которого представляет собой input и кнопку. В input можно ввести любое число. При клике на кнопку должно происходить следующее:</p>
+            <ul>
+                <li>
+                    Если число не попадает в диапазон от 1 до 10 — выводить ниже текст «число вне диапазона от 1 до 10».
+                </li>
+                <li>
+                    Если число попадает в диапазон от 1 до 10 — сделать запрос c помощью XHR по URL <a href="https://picsum.photos/v2/list?limit=10"><em>https://picsum.photos/v2/list?limit=10</em></a> , где get-параметр limit — это введённое число
+                </li>
+            </ul>
+        </div>
+        <div class="wrapper">
+            <form>
+                <p class="info">Введите число от 1 до 10 и нажмите Enter или на кнопку "Отправить запрос"</p>
+                <label class="label label_input">
+                    <!-- ==================================== -->
+                    <!-- <input class="input_number" type="number" name="input" max="10" min="1" placeholder="Введите число от 1 до 10" id="number_input" value="" required> -->
+                    <!-- ==================================== -->
+                    <!-- Если закомментировать верхний input и раскомментировать нижний будет работать валидация в JS. -->
+                    <!-- ==================================== -->
+                    <input class="input_number" type="number" name="input" placeholder="Введите число от 1 до 10" id="number_input" value="" required>
+                    <!-- ==================================== -->
+                </label>
+                <label class="label">
+                    <button type="submit" name="submitButton" id="submit_button" class="btn btn_request">Отправить запрос</button>
+                </label>
+            </form>
+        </div>
+        <!-- <div class="error_output"> -->
+        <p class="valid_input"></p>
+        <!-- </div> -->
+        <div class="honor_board" id="query_result"></div>
+</body>
+<script src="JS/script.js"></script>
+
+</html>

@@ -1,0 +1,107 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.text {
+    max-width: 800px;
+    font-size: 16px;
+}
+
+.wrapper {
+    max-width: 800px;
+    height: 150px;
+    border: solid 2px #61420c;
+    background-color: #F5F5DC;
+}
+
+.info {
+    font-size: 18px;
+    padding-left: 25px;
+}
+
+.img {
+    display: block;
+    width: 370px;
+    height: auto;
+    margin: 10px;
+
+}
+
+.input_number {
+    width: 200px;
+    height: 25px;
+    padding-left: 20px;
+    margin-left: 25px;
+    border-radius: 5px;
+    border: 2px solid #343435;
+}
+
+.valid_input {
+    font-size: 18px;
+    font-weight: 600;
+    color: red;
+    padding-left: 25px;
+}
+
+.honor_board {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 800px;
+    justify-content: center;
+    border: solid 2px #61420c;
+    background-color: #F5F5DC;
+}
+
+.author {
+    margin-left: 10px;
+}
+
+button {
+    cursor: pointer;
+    font-size: 16px;
+    background: #3498db;
+    color: #fff;
+    border: 0.25rem solid #3498db;
+    padding: 4px;
+    margin: 1rem;
+    border-radius: 5px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+
+}
+
+button:hover {
+    color: #3498db;
+
+}
+
+button::after {
+    content: "";
+    background: #ecf0f1;
+    position: absolute;
+    z-index: -1;
+    padding: 0.85em 0.75em;
+    display: block;
+}
+
+.btn::after {
+    transition: all 0.5s;
+
+}
+
+.btn:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    transition: all 0.5s;
+
+}
+
+.btn::after {
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>C5.7. Финальное задание Задание 5</title>
+    <link rel="stylesheet" type="text/css" href="CSS/styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+</head>
+
+<body>
+    <h2>C5.7. Финальное задание Задание 5</h1>
+        <div class="text">
+            <p>Написать код приложения, интерфейс которого состоит из двух input и кнопки. В input можно ввести любое число.</p>
+            <ul>
+                <li>
+                    Заголовок первого input — «номер страницы».
+                </li>
+                <li>
+                    Заголовок второго input — «лимит».
+                </li>
+                <li>
+                    Заголовок кнопки — «запрос».
+                </li>
+            </ul>
+            <p>При клике на кнопку происходит следующее:</p>
+            <ul>
+                <li>
+                    Если число в первом input не попадает в диапазон от 1 до 10 или не является числом — выводить ниже текст «Номер страницы вне диапазона от 1 до 10».
+                </li>
+                <li>
+                    Если число во втором input не попадает в диапазон от 1 до 10 или не является числом — выводить ниже текст «Лимит вне диапазона от 1 до 10».
+                </li>
+                <li>
+                    Если и первый, и второй input не в диапазонах или не являются числами — выводить ниже текст «Номер страницы и лимит вне диапазона от 1 до 10».
+                </li>
+                <li>
+                    Если числа попадают в диапазон от 1 до 10 — сделать запрос по URL <a href="https://picsum.photos/v2/list?page=1&limit=10"><em>https://picsum.photos/v2/list?page=1&limit=10</em></a>, где GET-параметр page — это число из первого input, а GET-параметр limit — это введённое число второго input.
+                </li>
+            </ul>
+            <p>После получения данных вывести список картинок на экран.
+
+            Если пользователь перезагрузил страницу, то ему должны показываться картинки из последнего успешно выполненного запроса (использовать localStorage).</p>
+        </div>
+        <div class="wrapper">
+            <form id="form" class="submit_form">
+                <p class="info">Введите числа от 1 до 10 и нажмите Enter <br> или на кнопку "Отправить запрос"</p>
+                <label class="label label_input">
+                    <span class="input_name">Страница:</span>
+                    <input class="input_number" type="number" name="input" placeholder="Введите число от 1 до 10" id="input_1" value="" required>
+                    <!-- ================================================= -->
+                </label>
+                <br>
+                <label class="label label_input">
+                    <span class="input_name">Лимит:</span>
+                    <input class="input_number" type="number" name="input" placeholder="Введите число от 1 до 10" id="input_2" value="" required>
+                    <!-- ================================================= -->
+                </label>
+                <br>
+                <!-- <label class="label"> -->
+                <button type="submit" name="submitButton" id="submit_button" class="btn btn_request">Отправит запрос</button>
+                <!-- </label> -->
+                <br>
+                <p class="valid_input"></p>
+            </form>
+            <div class="honor_board" id="query_result"></div>
+        </div>
+        <script src="JS/script.js"></script>
+</body>
+
+</html>
+
+
+
